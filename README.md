@@ -17,11 +17,16 @@ The game is implemented as a grid of cells with properties that can be manipulat
 - int adjcount;     // number of mines adjacent to this cell (0-8)
 
 During a game, the values of most cell properties are fixed before the game begins. How the cell is displayed in the grid depends on the value of these properties. In this program, the following rules apply:
-- covered == true && marked == false:                     ? (question mark)
-- covered == true && marked == false:                     X (capital X)
-- coverd == false && mined == true:                       * (asterisk)
-- covered == false && mined == false && adjcount == 0:    _ (underscore)
-- covered == false && mined == false && adjcount > 0:     n (integer value from 1 to 8)
+- covered == true && marked == false:                     
+      ? (question mark)
+- covered == true && marked == false:                     
+      X (capital X)
+- coverd == false && mined == true:                       
+      * (asterisk)
+- covered == false && mined == false && adjcount == 0:    
+      _ (underscore)
+- covered == false && mined == false && adjcount > 0:     
+      n (integer value from 1 to 8)
 
 Note some restrictions on how the Cell state is manipulated:
 - The basic properties are: row, col, mined
